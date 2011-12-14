@@ -23,28 +23,77 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
+
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+::-webkit-scrollbar {
+	width: 16px;
+	height: 16px;
+	border-width: 5px;
+	-webkit-border-image: url(images/border.png) 4 stretch;
+	-moz-border-image: url(images/border.png) 4 stretch;
+	background-color: #fff;
+}
+
+::-webkit-scrollbar-track {
+	
+}
+
+::-webkit-scrollbar-thumb {
+	-webkit-border-image: url(images/vertical-thumb.png) 2 stretch;
+	min-height: 20px;
+	border-color: transparent;
+    border-width: 3px;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    display: block;
+}
+
+::-webkit-scrollbar-button:vertical {
+    height: 16px;
+    background-repeat: no-repeat;
+    border-width: 5px;
+	-webkit-border-image: url(images/border.png) 4 stretch;
+	-moz-border-image: url(images/border.png) 4 stretch;
+	background-position: center;
+}
+
+::-webkit-scrollbar-button:vertical:decrement {
+    background-image: url(images/vertical-decrement-arrow.png);
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+    background-image: url(images/vertical-increment-arrow.png);
 }
 
 body {
@@ -56,6 +105,27 @@ body {
 * {
 	font-family: "Comic Sans MS";
 	font-size: 1em;
+}
+
+a {
+	color: #254e99;
+	margin-right: -20px;
+}
+
+a:after {
+	content: url(images/external-link.png);
+	left: -15px;
+	bottom: -15px;
+	position: relative;
+}
+
+a[href="#"] {
+	margin-right: auto;
+	margin-top: auto;
+}
+
+a[href="#"]:after {
+	content: none;
 }
 
 h1 {
